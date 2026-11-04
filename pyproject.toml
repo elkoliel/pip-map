@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pip-map"
+version = "0.1.0"
+authors = [
+    { name = "Alucard" },
+]
+description = "A lightweight CLI tool for inspecting installed Python distributions and estimating their disk usage."
+readme = "README.md"
+keywords = ["python", "pip", "cli", "disk-usage", "package-inspection"]
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+pip-map = "pip_map:main"
+
+[tool.setuptools]
+py-modules = ["pip_map"]
